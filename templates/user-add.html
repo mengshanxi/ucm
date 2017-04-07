@@ -8,18 +8,18 @@
           content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="../lib/html5.js"></script>
-    <script type="text/javascript" src="../lib/respond.min.js"></script>
-    <script type="text/javascript" src="../lib/PIE_IE678.js"></script>
+    <script type="text/javascript" src="/static/lib/html5.js"></script>
+    <script type="text/javascript" src="/static/lib/respond.min.js"></script>
+    <script type="text/javascript" src="/static/lib/PIE_IE678.js"></script>
     <![endif]-->
-    <link href="../css/H-ui.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/H-ui.admin.css" rel="stylesheet" type="text/css"/>
-    <link href="../lib/icheck/icheck.css" rel="stylesheet" type="text/css"/>
-    <link href="../lib/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/H-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/H-ui.admin.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/lib/icheck/icheck.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/lib/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <!--[if IE 7]>
     <link href="../lib/font-awesome/font-awesome-ie7.min.css" rel="stylesheet" type="text/css"/>
     <![endif]-->
-    <link href="../lib/iconfont/iconfont.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/lib/iconfont/iconfont.css" rel="stylesheet" type="text/css"/>
     <!--[if IE 6]>
     <script type="text/javascript" src="../lib/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
@@ -28,7 +28,7 @@
 </head>
 <body>
 <div class="pd-20">
-    <form action="add" method="post" class="form form-horizontal" id="form-user-add">
+    <form action="/add/" method="post" class="form form-horizontal" id="form-user-add">
         <div class="row cl">
             <label class="form-label col-3"><span class="c-red">*</span>用户名：</label>
             <div class="formControls col-5">
@@ -37,12 +37,10 @@
             </div>
             <div class="col-4"></div>
         </div>
-
-        </div>
         <div class="row cl">
             <label class="form-label col-3"><span class="c-red">*</span>姓名：</label>
             <div class="formControls col-5">
-                <input type="text" class="input-text" value="" placeholder="" id="realname" name="realname" datatype="m"
+                <input type="text" class="input-text" value="" placeholder="" id="realname" name="realname"
                        nullmsg="姓名不能为空">
             </div>
             <div class="col-4"></div>
@@ -55,11 +53,11 @@
     </form>
 </div>
 </div>
-<script type="text/javascript" src="../lib/jquery.min.js"></script>
-<script type="text/javascript" src="../lib/icheck/jquery.icheck.min.js"></script>
-<script type="text/javascript" src="../lib/Validform_v5.3.2.js"></script>
-<script type="text/javascript" src="../js/H-ui.js"></script>
-<script type="text/javascript" src="../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="/static/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="/static/lib/Validform_v5.3.2.js"></script>
+<script type="text/javascript" src="/static/js/H-ui.js"></script>
+<script type="text/javascript" src="/static/js/H-ui.admin.js"></script>
 <script type="text/javascript">
     $(function () {
         $("#form-user-add").Validform({

@@ -1,14 +1,33 @@
-#-*- coding: UTF-8 -*-
+# -*- coding: UTF-8 -*-
 from django.shortcuts import render
-from django.shortcuts import redirect
+from ucmapp.models import Employee
+from django.contrib import admin
 
 
 def login(request):
     if request.method == 'POST':
-        input_email = request.POST['email']
-        input_pwd = request.POST['pwd']
-        if input_email == 'user1@qq.com' and input_pwd == '123':
-            return redirect("http://www.etiantian.org")
+        username = request.POST['username']
+        password = request.POST['password']
+        if username == 'user01' and password == '123456':
+            return render(request, "index.html")
         else:
             return render(request, "login.html", {"status": "用户名密码错误"})
     return render(request, 'login.html')
+
+
+def welcome(request):
+    return render(request, "welcome.html")
+
+
+def users(request):
+    return render(request, 'user-list.html')
+
+
+def addUser(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        realname = request.POST['realname']
+        employee = Employee(username=username, realname=realname)
+        employee.save()
+        return render(request, "index.html")
+    return render(request, "user-add.html")
